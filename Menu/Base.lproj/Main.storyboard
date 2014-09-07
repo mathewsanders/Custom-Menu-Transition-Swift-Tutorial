@@ -338,6 +338,20 @@
                         <size key="portraitSize" width="320" height="568"/>
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
+                    <connections>
+                        <outlet property="audioPostIcon" destination="pd4-pE-aty" id="vzX-zX-Oga"/>
+                        <outlet property="audioPostLabel" destination="5HX-u4-icZ" id="0ss-8g-MSf"/>
+                        <outlet property="chatPostIcon" destination="RWa-jf-dGV" id="VCN-SG-yNb"/>
+                        <outlet property="chatPostLabel" destination="1nJ-Vu-s0M" id="7KY-Eb-6nl"/>
+                        <outlet property="linkPostIcon" destination="DcF-ka-bVr" id="Fwd-vf-i3D"/>
+                        <outlet property="linkPostLabel" destination="pyG-TL-hRe" id="Qru-nO-NB4"/>
+                        <outlet property="photoPostIcon" destination="gff-0N-WX7" id="LSJ-MP-Do8"/>
+                        <outlet property="photoPostLabel" destination="y5C-Fi-uGa" id="GwP-Qg-nu0"/>
+                        <outlet property="quotePostIcon" destination="ca8-gb-2bo" id="Rlc-9O-HbV"/>
+                        <outlet property="quotePostLabel" destination="e8W-8C-Jse" id="c9j-YV-Dnm"/>
+                        <outlet property="textPostIcon" destination="cDm-Jc-goB" id="Gfe-rD-pie"/>
+                        <outlet property="textPostLabel" destination="fhe-lg-BKf" id="xCq-GJ-HRf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <exit id="uyn-sM-I9r" userLabel="Exit" sceneMemberID="exit"/>
