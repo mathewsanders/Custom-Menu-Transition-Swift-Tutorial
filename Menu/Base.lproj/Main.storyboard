@@ -192,7 +192,7 @@
                         <barButtonItem systemItem="add" id="6w2-tv-6h6">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="presentation" id="c85-4I-K0b"/>
+                                <segue destination="vXZ-lx-hvc" kind="presentation" modalPresentationStyle="overFullScreen" id="c85-4I-K0b"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="fqF-oE-Iw8">

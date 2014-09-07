@@ -16,7 +16,8 @@ class MainViewController: UITableViewController {
     }
     
     @IBAction func unwindToMainViewController (sender: UIStoryboardSegue){
-        
+        // bug? exit segue doesn't dismiss so we do it manually... 
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
