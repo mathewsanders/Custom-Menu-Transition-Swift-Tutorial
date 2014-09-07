@@ -10,9 +10,13 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    // create instance of our custom transition manager
+    let transitionManager = MenuTransitionManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.transitioningDelegate = self.transitionManager
 
     }
     

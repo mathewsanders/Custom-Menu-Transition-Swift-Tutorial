@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AF952A6419BCC8370042E7BE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF952A6319BCC8370042E7BE /* MainViewController.swift */; };
 		AF952A6619BCCE2A0042E7BE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF952A6519BCCE2A0042E7BE /* Media.xcassets */; };
+		AF952A6A19BCF1490042E7BE /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF952A6919BCF1490042E7BE /* MenuTransitionManager.swift */; };
 		AFC04D4E19BCBD9000AA30D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC04D4D19BCBD9000AA30D6 /* AppDelegate.swift */; };
 		AFC04D5019BCBD9000AA30D6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC04D4F19BCBD9000AA30D6 /* MenuViewController.swift */; };
 		AFC04D5319BCBD9000AA30D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC04D5119BCBD9000AA30D6 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		AF952A6319BCC8370042E7BE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AF952A6519BCCE2A0042E7BE /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = ../Media.xcassets; sourceTree = "<group>"; };
+		AF952A6919BCF1490042E7BE /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		AFC04D4819BCBD9000AA30D6 /* Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Menu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC04D4C19BCBD9000AA30D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFC04D4D19BCBD9000AA30D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				AF952A6319BCC8370042E7BE /* MainViewController.swift */,
 				AFC04D4F19BCBD9000AA30D6 /* MenuViewController.swift */,
 				AFC04D5119BCBD9000AA30D6 /* Main.storyboard */,
+				AF952A6919BCF1490042E7BE /* MenuTransitionManager.swift */,
 				AFC04D4B19BCBD9000AA30D6 /* Supporting Files */,
 			);
 			path = Menu;
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF952A6419BCC8370042E7BE /* MainViewController.swift in Sources */,
+				AF952A6A19BCF1490042E7BE /* MenuTransitionManager.swift in Sources */,
 				AFC04D5019BCBD9000AA30D6 /* MenuViewController.swift in Sources */,
 				AFC04D4E19BCBD9000AA30D6 /* AppDelegate.swift in Sources */,
 			);
