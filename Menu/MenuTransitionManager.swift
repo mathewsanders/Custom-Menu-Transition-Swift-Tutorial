@@ -73,9 +73,9 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
         menuViewController.view.alpha = 0
         
         // setup paramaters for 2D transitions for animations
-        let topRowOffset  :CGFloat = 50
+        let topRowOffset  :CGFloat = 300
         let middleRowOffset :CGFloat = 150
-        let bottomRowOffset  :CGFloat = 300
+        let bottomRowOffset  :CGFloat = 50
         
         menuViewController.textPostIcon.transform = self.offStage(-topRowOffset)
         menuViewController.textPostLabel.transform = self.offStage(-topRowOffset)
