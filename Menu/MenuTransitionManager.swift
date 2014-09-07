@@ -64,31 +64,36 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
         
     }
     
+    func offStage(amount: CGFloat) -> CGAffineTransform {
+        return CGAffineTransformMakeTranslation(amount, 0)
+    }
+    
     func offStageMenuController(menuViewController: MenuViewController){
         
         menuViewController.view.alpha = 0
         
-        // setup 2D transitions for animations
-        let offstageLeft = CGAffineTransformMakeTranslation(-150, 0)
-        let offstageRight = CGAffineTransformMakeTranslation(150, 0)
+        // setup paramaters for 2D transitions for animations
+        let topRowOffset  :CGFloat = 50
+        let middleRowOffset :CGFloat = 150
+        let bottomRowOffset  :CGFloat = 300
         
-        menuViewController.textPostIcon.transform = offstageLeft
-        menuViewController.textPostLabel.transform = offstageLeft
+        menuViewController.textPostIcon.transform = self.offStage(-topRowOffset)
+        menuViewController.textPostLabel.transform = self.offStage(-topRowOffset)
         
-        menuViewController.quotePostIcon.transform = offstageLeft
-        menuViewController.quotePostLabel.transform = offstageLeft
+        menuViewController.quotePostIcon.transform = self.offStage(-middleRowOffset)
+        menuViewController.quotePostLabel.transform = self.offStage(-middleRowOffset)
         
-        menuViewController.chatPostIcon.transform = offstageLeft
-        menuViewController.chatPostLabel.transform = offstageLeft
+        menuViewController.chatPostIcon.transform = self.offStage(-bottomRowOffset)
+        menuViewController.chatPostLabel.transform = self.offStage(-bottomRowOffset)
         
-        menuViewController.photoPostIcon.transform = offstageRight
-        menuViewController.photoPostLabel.transform = offstageRight
+        menuViewController.photoPostIcon.transform = self.offStage(topRowOffset)
+        menuViewController.photoPostLabel.transform = self.offStage(topRowOffset)
         
-        menuViewController.linkPostIcon.transform = offstageRight
-        menuViewController.linkPostLabel.transform = offstageRight
+        menuViewController.linkPostIcon.transform = self.offStage(middleRowOffset)
+        menuViewController.linkPostLabel.transform = self.offStage(middleRowOffset)
         
-        menuViewController.audioPostIcon.transform = offstageRight
-        menuViewController.audioPostLabel.transform = offstageRight
+        menuViewController.audioPostIcon.transform = self.offStage(bottomRowOffset)
+        menuViewController.audioPostLabel.transform = self.offStage(bottomRowOffset)
         
         
         
