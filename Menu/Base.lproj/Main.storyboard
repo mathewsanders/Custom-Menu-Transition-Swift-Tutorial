@@ -299,7 +299,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="e8W-8C-Jse" firstAttribute="top" secondItem="ca8-gb-2bo" secondAttribute="bottom" constant="2" id="97V-yk-kQ4"/>
                             <constraint firstItem="ca8-gb-2bo" firstAttribute="centerX" secondItem="fhe-lg-BKf" secondAttribute="centerX" id="D1B-Hu-7MB"/>
