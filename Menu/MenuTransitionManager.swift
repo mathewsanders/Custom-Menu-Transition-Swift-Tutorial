@@ -31,23 +31,9 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
         let menuView = menuViewController.view
         let bottomView = bottomViewController.view
         
-        // setup 2D transitions for animations 
-        let offstageLeft = CGAffineTransformMakeTranslation(-150, 0)
-        let offstageRight = CGAffineTransformMakeTranslation(150, 0)
-        
-        // prepare the menu
+        // prepare menu items to slide in
         if (self.presenting){
-            
-            // prepare menu to fade in
-            menuView.alpha = 0
-            
-            // prepare menu items to slide in
-            menuViewController.textPostIcon.transform = offstageLeft
-            menuViewController.textPostLabel.transform = offstageLeft
-            
-            menuViewController.photoPostIcon.transform = offstageRight
-            menuViewController.photoPostLabel.transform = offstageRight
-            
+            self.offStageMenuController(menuViewController)
         }
         
         // add the both views to our view controller
@@ -60,31 +46,12 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
         UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: {
             
                 if (self.presenting){
-                    // fade in
-                    menuView.alpha = 1
-                    
-                    // onstage items: slide in
-                    menuViewController.textPostIcon.transform = CGAffineTransformIdentity
-                    menuViewController.textPostLabel.transform = CGAffineTransformIdentity
-                    
-                    menuViewController.photoPostIcon.transform = CGAffineTransformIdentity
-                    menuViewController.photoPostLabel.transform = CGAffineTransformIdentity
-                    
+                    self.onStageMenuController(menuViewController) // onstage items: slide in
                 }
                 else {
-                    // fade out
-                    menuView.alpha = 0
-                    
-                    // offstage items: slide out
-                    menuViewController.textPostIcon.transform = offstageLeft
-                    menuViewController.textPostLabel.transform = offstageLeft
-                    
-                    menuViewController.photoPostIcon.transform = offstageRight
-                    menuViewController.photoPostLabel.transform = offstageRight
-                    
+                    self.offStageMenuController(menuViewController) // offstage items: slide out
                 }
 
-            
             }, completion: { finished in
                 
                 // tell our transitionContext object that we've finished animating
@@ -94,6 +61,61 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
                 UIApplication.sharedApplication().keyWindow.addSubview(screens.to.view)
                 
         })
+        
+    }
+    
+    func offStageMenuController(menuViewController: MenuViewController){
+        
+        menuViewController.view.alpha = 0
+        
+        // setup 2D transitions for animations
+        let offstageLeft = CGAffineTransformMakeTranslation(-150, 0)
+        let offstageRight = CGAffineTransformMakeTranslation(150, 0)
+        
+        menuViewController.textPostIcon.transform = offstageLeft
+        menuViewController.textPostLabel.transform = offstageLeft
+        
+        menuViewController.quotePostIcon.transform = offstageLeft
+        menuViewController.quotePostLabel.transform = offstageLeft
+        
+        menuViewController.chatPostIcon.transform = offstageLeft
+        menuViewController.chatPostLabel.transform = offstageLeft
+        
+        menuViewController.photoPostIcon.transform = offstageRight
+        menuViewController.photoPostLabel.transform = offstageRight
+        
+        menuViewController.linkPostIcon.transform = offstageRight
+        menuViewController.linkPostLabel.transform = offstageRight
+        
+        menuViewController.audioPostIcon.transform = offstageRight
+        menuViewController.audioPostLabel.transform = offstageRight
+        
+        
+        
+    }
+    
+    func onStageMenuController(menuViewController: MenuViewController){
+        
+        // prepare menu to fade in
+        menuViewController.view.alpha = 1
+        
+        menuViewController.textPostIcon.transform = CGAffineTransformIdentity
+        menuViewController.textPostLabel.transform = CGAffineTransformIdentity
+        
+        menuViewController.quotePostIcon.transform = CGAffineTransformIdentity
+        menuViewController.quotePostLabel.transform = CGAffineTransformIdentity
+        
+        menuViewController.chatPostIcon.transform = CGAffineTransformIdentity
+        menuViewController.chatPostLabel.transform = CGAffineTransformIdentity
+        
+        menuViewController.photoPostIcon.transform = CGAffineTransformIdentity
+        menuViewController.photoPostLabel.transform = CGAffineTransformIdentity
+        
+        menuViewController.linkPostIcon.transform = CGAffineTransformIdentity
+        menuViewController.linkPostLabel.transform = CGAffineTransformIdentity
+        
+        menuViewController.audioPostIcon.transform = CGAffineTransformIdentity
+        menuViewController.audioPostLabel.transform = CGAffineTransformIdentity
         
     }
     
