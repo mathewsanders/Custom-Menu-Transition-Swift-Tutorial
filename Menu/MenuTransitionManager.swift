@@ -58,7 +58,7 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
                 transitionContext.completeTransition(true)
                 
                 // bug: we have to manually add our 'to view' back http://openradar.appspot.com/radar?id=5320103646199808
-                UIApplication.sharedApplication().keyWindow.addSubview(screens.to.view)
+                UIApplication.sharedApplication().keyWindow!.addSubview(screens.to.view)
                 
         })
         
